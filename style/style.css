@@ -283,6 +283,7 @@ section.sec4 .sec4_div .qna_ul li .item2 .q_box .q_text { font-size: 18px; }
     section.sec4 .sec4_div .qna_ul li .item2 .q_box .q_text { font-size: 14px; }
     section.sec4 .sec4_div .qna_ul li .item1 .q_box .icon_q { width: 18px; }
     section.sec4 .sec4_div .qna_ul li .item2 .q_box .icon_a { width: 18px; }
+    section.sec4 .sec4_div .qna_ul li { padding: 0 15px; }
 }
 
 /* sec5 */

@@ -340,8 +340,8 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
 
 .bottom-apply-sec .b_contactBtn { padding: 15px 0; width: 116px; color: #fff; background: #366CB4; border: none; }
 
-.bottom-apply-sec .b_button { border: 2px solid #fff; background: none; width: 50px; aspect-ratio: 1; position: absolute; top: 5px; right: -30px;  }
-.bottom-apply-sec .b_button.on { top: -90px; }
+.bottom-apply-sec .b_button { border: 2px solid #fff;  background: none; width: 50px; aspect-ratio: 1; position: absolute; top: 5px; right: -30px;  }
+.bottom-apply-sec .b_button.on { top: -90px; background: #366CB4; }
 .bottom-apply-sec .b_button.on .b_arrow { transform: rotate(-180deg); }
 .bottom-apply-sec .b_button .b_arrow { }
 

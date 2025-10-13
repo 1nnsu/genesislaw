@@ -249,7 +249,7 @@ section.sec4 .sec4_div { padding: 80px 0; background: #fff; }
 section.sec4 .sec4_div .qna_ul { max-width: 1000px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; font-weight: 700; }
 section.sec4 .sec4_div .qna_ul li { padding: 0 30px; border-radius: 10px; border: 1px solid #E4E4e4; border-radius: 10px; box-shadow: 4px 10px 4px 0 rgba(0, 0, 0, 0.15); }
 section.sec4 .sec4_div .qna_ul li .item1 { cursor: pointer; padding: 20px 0; display: flex; align-items: center; justify-content: space-between;  }
-section.sec4 .sec4_div .qna_ul li .item2 { cursor: pointer; padding: 20px 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #E4E4E4; display: none;}
+section.sec4 .sec4_div .qna_ul li .item2 { padding: 20px 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #E4E4E4; display: none;}
 section.sec4 .sec4_div .qna_ul li .item1 .q_box { display: flex; align-items: center; gap: 20px;  }
 section.sec4 .sec4_div .qna_ul li .item1 .q_box .icon_q {  }
 section.sec4 .sec4_div .qna_ul li .item1 .q_box .q_text { font-size: 18px; }
@@ -262,6 +262,9 @@ section.sec4 .sec4_div .qna_ul li .item2 .q_box .q_text { font-size: 18px; }
 
 @media screen and (max-width: 1250px) {
     section.sec4 .sec4_div { padding: 80px 10px; }
+}
+@media screen and (max-width: 720px) {
+    section.sec4 .sec4_div .qna_ul li .item2 .q_box .q_text br { display: none; }
 }
 @media screen and (max-width: 650px) {
     section.sec4 { padding: 13vw 0; }
@@ -325,6 +328,7 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
 
 .bottom-apply-sec { padding: 15px 0; width: 100%; position: fixed; z-index: 1; bottom: 0; left: 0; background: #234470; transition: bottom 300ms, opacity 300ms; }
 .bottom-apply-sec.on { bottom: -91px; }
+.bottom-apply-sec.hide {  bottom: -91px;}
 .bottom-apply-sec .inner {  position: relative; display: flex; align-items: center; justify-content: center; gap: 15px; }
 
 .bottom-apply-sec .text { font-size: 20px; font-family: 'Paperlogy'; color: #fff; flex-shrink: 0; white-space: nowrap; }

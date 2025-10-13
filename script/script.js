@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     checkUl_1();
     checkUl_2();
     bottomMenuBtn();
+    b_menu_scroll_top();
 })
 
 
@@ -30,4 +31,14 @@ const bottomMenuBtn = () => {
         $(this).toggleClass('on');
         $('.bottom-apply-sec').toggleClass('on');
     })
+}
+const b_menu_scroll_top = () => {
+    $("body").on("wheel", function (e) {
+        var wheel = e.originalEvent.deltaY;
+        if (wheel > 0) {
+            $('.bottom-apply-sec').addClass("hide");
+        } else {
+            $('.bottom-apply-sec').removeClass("hide");
+        }
+    });  
 }

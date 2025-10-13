@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 const qnaToggle = () => {
     $('.qna_ul li .item1').click(function(){
-        $(this).siblings('.qna_ul li .item2').slideToggle();
+        $(this).siblings('.qna_ul li .item2').stop().slideToggle();
         $(this).find('.arrow').toggleClass('on');
     })
 }

@@ -320,3 +320,63 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
     .sec5 .j_titleBox .j_sub { font-size: 12px; }
     .sec5 .check_ul li { width: calc(100%/2); }
 }
+
+/* bottom-apply-sec */
+
+.bottom-apply-sec { padding: 15px 0; width: 100%; position: fixed; z-index: 1; bottom: 0; left: 0; background: #234470; transition: bottom 300ms, opacity 300ms; }
+.bottom-apply-sec.on { bottom: -91px; }
+.bottom-apply-sec .inner {  position: relative; display: flex; align-items: center; justify-content: center; gap: 15px; }
+
+.bottom-apply-sec .text { font-size: 20px; font-family: 'Paperlogy'; color: #fff; flex-shrink: 0; white-space: nowrap; }
+.bottom-apply-sec .text b { font-weight: 700; }
+
+.bottom-apply-sec .b_formBox { max-width: 920px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 15px; }
+.bottom-apply-sec .b_formBox .formList { display: flex; flex-wrap: nowrap; }
+.bottom-apply-sec .b_formBox .b_contactBtn { font-size: 16px; color: #fff; font-weight: 700; }
+
+.bottom-apply-sec .b_formBox .agreeCheckDiv { margin-top: unset; }
+.bottom-apply-sec .b_formBox .agreeCheckDiv .privacyPopupBtn { white-space: nowrap; color: #fff; }
+.bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox::before { border: 1px solid #fff; }
+
+.bottom-apply-sec .b_contactBtn { padding: 15px 0; width: 116px; color: #fff; background: #366CB4; border: none; }
+
+.bottom-apply-sec .b_button { border: 2px solid #fff; background: none; width: 50px; aspect-ratio: 1; position: absolute; top: 5px; right: -30px;  }
+.bottom-apply-sec .b_button.on { top: -90px; }
+.bottom-apply-sec .b_button.on .b_arrow { transform: rotate(-180deg); }
+.bottom-apply-sec .b_button .b_arrow { }
+
+.bottom-apply-sec .b_contactBtn.b_contactBtn2 { display: none; }
+.bottom-apply-sec .agreeCheckDiv.agreeCheckDiv2 { display: none; }
+
+
+@media screen and (max-width: 1280px) {
+    .bottom-apply-sec .b_button { display: none; }
+    
+}
+@media screen and (max-width: 950px) {
+    /* .bottom-apply-sec .text br { display: none; } */
+    /* .bottom-apply-sec .inner { flex-direction: column; } */
+    .bottom-apply-sec .b_formBox .agreeCheckDiv .privacyPopupBtn { font-size: 14px; }
+    .bottom-apply-sec .ipt { font-size: 12px; }
+    .bottom-apply-sec .b_contactBtn { padding: 12px 0; }
+}
+@media screen and (max-width: 830px) {
+    .bottom-apply-sec .text br { display: none; }
+    .bottom-apply-sec .inner { flex-direction: column; }
+    .bottom-apply-sec .inner .item { width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .bottom-apply-sec .b_contactBtn.b_contactBtn2 { display: block; }
+    .bottom-apply-sec .agreeCheckDiv.agreeCheckDiv2 { display: flex; align-items: center; justify-content: center; gap: 10px; color: #fff; margin-top: 0; }
+    .bottom-apply-sec .agreeCheckDiv { display: none; }
+    .bottom-apply-sec .b_contactBtn { display: none; }
+}
+@media screen and (max-width: 500px) {
+    .bottom-apply-sec .inner { gap: 5px; }
+    .bottom-apply-sec .text { font-size: 16px; }
+    .bottom-apply-sec .agreeCheckDiv.agreeCheckDiv2 { font-size: 10px; }
+    .bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox::before { width: 12px; height: 12px; }
+    .bottom-apply-sec .b_contactBtn { padding: 10px 0; }
+    .bottom-apply-sec .ipt { font-size: 10px; }
+    .bottom-apply-sec .formList > li { padding: 5px; }
+    .bottom-apply-sec { padding: 10px 0; }
+    
+}

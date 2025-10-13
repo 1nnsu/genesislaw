@@ -30,17 +30,27 @@ const privacyUsePopup = () => {
     })
 }
 const bodyScroll = () => {
+    // 필요한 요소가 있는지 확인
+    const wrapper = document.querySelector("#smooth-wrapper");
+    const content = document.querySelector("#smooth-content");
+  
+    if (!wrapper || !content) {
+      // 요소 없으면 함수 실행 안 하고 종료
+      return;
+    }
+  
     gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
-
+  
     ScrollSmoother.create({
-        wrapper: "#smooth-wrapper",
-        content: "#smooth-content",
-        smooth: 1.2,         // ← 숫자 높을수록 감속이 강해짐
-        effects: true,        // 패럴럭스 같은 ScrollTrigger 효과 활성화
-        ease: "power4.out", // 더 강한 감속 (추천)
-        autoKill: false // 스크롤 중단 방지
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.2,         // ← 숫자 높을수록 감속이 강해짐
+      effects: true,       // 패럴럭스 같은 ScrollTrigger 효과 활성화
+      ease: "power4.out",  // 더 강한 감속 (추천)
+      autoKill: false      // 스크롤 중단 방지
     });
-}
+};
+  
 const headerScrollHandler = () => {
     /* header */
     const header_main = document.querySelector('header');
@@ -49,9 +59,9 @@ const headerScrollHandler = () => {
         document.addEventListener("scroll", function(){
             let scroll_top = window.scrollY;
             if(scroll_top > 0){
-                header_main.classList.add("on");
+                header_main.classList.add("show");
             }else{
-                header_main.classList.remove("on");
+                header_main.classList.remove("show");
             }
         })
     }

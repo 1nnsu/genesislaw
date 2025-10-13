@@ -344,6 +344,7 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
 .bottom-apply-sec .b_formBox .agreeCheckDiv .privacyPopupBtn { white-space: nowrap; color: #fff; }
 .bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox::before { border: 1px solid #fff; }
 .bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox { align-items: center; }
+.bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox { align-items: center; }
 .bottom-apply-sec .b_contactBtn { padding: 15px 0; width: 116px; color: #fff; background: #366CB4; border: none; }
 
 .bottom-apply-sec .b_button { border: 2px solid #fff;  background: none; width: 50px; aspect-ratio: 1; position: absolute; top: 5px; right: -30px;  }
@@ -360,6 +361,7 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
     
 }
 @media screen and (max-width: 950px) {
+    .bottom-apply-sec.hide { bottom: -161px; }
     /* .bottom-apply-sec .text br { display: none; } */
     /* .bottom-apply-sec .inner { flex-direction: column; } */
     .bottom-apply-sec .b_formBox .agreeCheckDiv .privacyPopupBtn { font-size: 14px; }

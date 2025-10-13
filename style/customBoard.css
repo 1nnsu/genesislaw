@@ -232,8 +232,8 @@ textarea.ipt{ resize: none; height: 170px; }
 
 .agreeCheckDiv{ margin-top: 10px; display: flex; justify-content: flex-start; color: #7F7F7F; }
 .agreeCheckDiv label input[type="checkbox"]{ display: none; }
-.agreeCheckDiv label input[type="checkbox"] + .textBox{ display: flex; align-items: flex-start; gap: 4px; }
-.agreeCheckDiv label input[type="checkbox"] + .textBox::before{ flex-shrink: 0; content:''; display: block; flex-shrink: 0; border: 1px solid #7f7f7f; width:16px; height: 16px;  }
+.agreeCheckDiv label input[type="checkbox"] + .textBox{ display: flex; align-items: center; gap: 4px; }
+.agreeCheckDiv label input[type="checkbox"] + .textBox::before{ flex-shrink: 0; content:''; display: block; flex-shrink: 0; border: 1px solid #3A3D62; width:16px; height: 16px;  }
 .agreeCheckDiv label input[type="checkbox"]:checked + .textBox::before{ background-color: #fff; background-image: url('../img/common/checkbox_icon.png'); background-size: 100%; background-repeat: no-repeat; background-position: center; }
 .agreeCheckDiv label .black{ color: #070707; cursor: pointer; }
 input[type="file"].ipt label input[type="checkbox"]{ display: none;  }

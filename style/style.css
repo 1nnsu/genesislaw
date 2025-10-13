@@ -52,7 +52,6 @@ p{ word-break: keep-all; }
     .paging_box{ font-size: 13px; }
 } /* mobile */
 
-
 /* header */
 header{ color: #fff; background-color: rgba(0,0,0,.4); position: fixed; left: 0; top: 0; width: 100%; z-index: 99; padding: 20px 0; }
 header .inner{ display: flex; align-items: center; justify-content: space-between; }
@@ -70,7 +69,7 @@ header .apply-btn{ background-color: #222; border: 3px solid #779EE2; border-rad
 }
 
 /* footer */
-footer{ padding: 40px 0; background-color: #181818; color: #a3a3a3;  }
+footer{ padding: 40px 0; background-color: #181818; color: #a3a3a3; margin-bottom: 81px;  }
 footer .inner{ display: flex; flex-wrap: wrap; }
 footer .info-div{ line-height: 1.5em; flex-grow: 1; padding-left: 195px; }
 footer .copy-right{ width: 100%; margin-top: 23px; opacity: .2; font-size: .8em; }
@@ -331,7 +330,7 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
 
 .bottom-apply-sec { padding: 15px 0; width: 100%; position: fixed; z-index: 1; bottom: 0; left: 0; background: #234470; transition: bottom 300ms, opacity 300ms; }
 .bottom-apply-sec.on { bottom: -91px; }
-.bottom-apply-sec.hide {  bottom: -91px;}
+.bottom-apply-sec.hide {   bottom: -101px;}
 .bottom-apply-sec .inner {  position: relative; display: flex; align-items: center; justify-content: center; gap: 15px; }
 
 .bottom-apply-sec .text { font-size: 20px; font-family: 'Paperlogy'; color: #fff; flex-shrink: 0; white-space: nowrap; }
@@ -344,7 +343,7 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
 .bottom-apply-sec .b_formBox .agreeCheckDiv { margin-top: unset; }
 .bottom-apply-sec .b_formBox .agreeCheckDiv .privacyPopupBtn { white-space: nowrap; color: #fff; }
 .bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox::before { border: 1px solid #fff; }
-
+.bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox { align-items: center; }
 .bottom-apply-sec .b_contactBtn { padding: 15px 0; width: 116px; color: #fff; background: #366CB4; border: none; }
 
 .bottom-apply-sec .b_button { border: 2px solid #fff;  background: none; width: 50px; aspect-ratio: 1; position: absolute; top: 5px; right: -30px;  }

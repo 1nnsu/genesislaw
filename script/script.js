@@ -15,13 +15,13 @@ const qnaToggle = () => {
 }
 const checkUl_1 = () => {
     $('.check_ul_1 li').click(function(){
-        // $('.check_ul_1 li').removeClass('on');
+        $('.check_ul_1 li').removeClass('on');
         $(this).toggleClass('on');
     })
 }
 const checkUl_2 = () => {
     $('.check_ul_2 li').click(function(){
-        // $('.check_ul_2 li').removeClass('on');
+        $('.check_ul_2 li').removeClass('on');
         $(this).toggleClass('on');
     })
 }
@@ -33,12 +33,16 @@ const bottomMenuBtn = () => {
     })
 }
 const b_menu_scroll_top = () => {
-    $("body").on("wheel", function (e) {
-        var wheel = e.originalEvent.deltaY;
-        if (wheel > 0) {
+    $(window).on("scroll", function () {
+        const scrollBottom = $(window).scrollTop() + $(window).height(); // 현재 스크롤 맨 아래 위치
+        const docHeight = $(document).height(); // 문서 전체 높이
+
+        if (scrollBottom >= docHeight) {
+            // 페이지 맨 아래에 도달하면 숨기기
             $('.bottom-apply-sec').addClass("hide");
         } else {
+            // 맨 아래가 아니면 항상 보이기
             $('.bottom-apply-sec').removeClass("hide");
         }
-    });  
-}
+    });
+};

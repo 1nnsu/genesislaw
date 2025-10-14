@@ -298,6 +298,8 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
 .sec5 .check_ul { width: calc(100% + 10px); margin-left: -5px; display: flex; flex-wrap: wrap; }
 .sec5 .check_ul li { width: calc(100%/3); cursor: pointer; padding: 5px;  text-align: center; font-size: 14px;  font-weight: 700; color: #3A3D62; }
 .sec5 .check_ul li .item { padding: 12px 0; border: 2px solid #3A3D62; }
+.sec5 .check_ul input[type=radio]{ display: none; }
+.sec5 .check_ul input[type=radio]:checked + .item{  background: #3A3D62; color: #fff;  }
 .sec5 .check_ul li.on .item {  background: #3A3D62; color: #fff;  }
 
 .sec5 .check_ul.check_ul_2 li { width: calc(100%/2); }

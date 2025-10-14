@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(e){
     qnaToggle();
-    checkUl_1();
-    checkUl_2();
+    // checkUl_1();
+    // checkUl_2();
     bottomMenuBtn();
     b_menu_scroll_top();
 })

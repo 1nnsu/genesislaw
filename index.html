@@ -343,51 +343,66 @@
                                         <li class="">
                                             <div class="label">성함 <span>*</span></div>
                                             <div class="iptBox">
-                                                <input type="text" required placeholder="내용을 입력해주세요" class="ipt" />
+                                                <input type="text" placeholder="내용을 입력해주세요" class="ipt nameInput" />
                                             </div>
                                         </li>
                                         <li class="">
                                             <div class="label">연락처 <span>*</span></div>
                                             <div class="iptBox iptBox2">
-                                                <input type="email" required placeholder="" class="ipt" />
+                                                <input type="tel" inputmode="numeric" maxlength="3"  required placeholder="" class="ipt" />
                                                 <span>-</span>
-                                                <input type="email" required placeholder="" class="ipt" />
+                                                <input type="tel" inputmode="numeric" maxlength="4"  required placeholder="" class="ipt" />
                                                 <span>-</span>
-                                                <input type="email" required placeholder="" class="ipt" />
+                                                <input type="tel" inputmode="numeric" maxlength="4"  required placeholder="" class="ipt" />
                                             </div>
                                         </li>
                                         <li class="">
                                             <div class="label">직군선택 <span>*</span></div>
                                             <ul class="check_ul check_ul_1">
-                                                <li class="on">
-                                                    <div class="item">
-                                                        근로소득자
-                                                    </div>
+                                                <li>
+                                                    <label>
+                                                        <input type="radio" />
+                                                        <div class="item">
+                                                            근로소득자
+                                                        </div>
+                                                    </label>
                                                 </li>
                                                 <li>
-                                                    <div class="item">
-                                                        사업소득자(프리랜서포함)
-                                                    </div>
+                                                    <label>
+                                                        <input type="radio" />
+                                                        <div class="item">
+                                                            사업소득자(프리랜서포함)
+                                                        </div>
+                                                    </label>
                                                 </li>
                                                 <li>
-                                                    <div class="item">
-                                                        기타
-                                                    </div>
+                                                    <label>
+                                                        <input type="radio" />
+                                                        <div class="item">
+                                                            기타
+                                                        </div>
+                                                    </label>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="">
                                             <div class="label">상담 가능 시간 <span>*</span></div>
                                             <ul class="check_ul check_ul_2">
-                                                <li class="on">
-                                                    <div class="item">
-                                                        주간
-                                                    </div>
+                                                <li>
+                                                    <label>
+                                                        <input type="radio" name="r1" />
+                                                        <div class="item">
+                                                            주간
+                                                        </div>
+                                                    </label>
                                                 </li>
                                                 <li>
-                                                    <div class="item">
-                                                        야간
-                                                    </div>
+                                                    <label>
+                                                        <input type="radio"  name="r1" />
+                                                        <div class="item">
+                                                            야간
+                                                        </div>
+                                                    </label>
                                                 </li>
                                             </ul>
                                         </li>
@@ -434,6 +449,9 @@
                 </div>
             </div>
         </section>
+
+
+
         <section class="bottom-apply-sec">
             <div class="inner">
                 <div class="item">
@@ -452,10 +470,10 @@
                 <div class="b_formBox">
                     <ul class="formList">
                         <li>
-                            <input type="text" name="" class="ipt" placeholder="성함" />
+                            <input type="text" name="" class="ipt nameInput" placeholder="성함" />
                         </li>
                         <li>
-                            <input type="text" name="" class="ipt" placeholder="연락처" />
+                            <input type="tel" name="" id="quickTel"  inputmode="numeric" class="ipt" placeholder="연락처" />
                         </li>
                         <li>
                             <select class="ipt">
@@ -478,5 +496,78 @@
                 </button>
             </div>
         </section>
+
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // 1️⃣ 성함 입력란 — 숫자만 입력 불가
+                const nameInputs = document.querySelectorAll('.nameInput');
+
+                if (nameInputs.length) {
+                    nameInputs.forEach(input => {
+                        input.addEventListener('input', function () {
+                        // 숫자 제거
+                        this.value = this.value.replace(/[0-9]/g, '');
+                        });
+                    });
+                }
+            
+                // 2️⃣ 상담신청란 연락처 (3-4-4 형식)
+                const contactInputs = document.querySelectorAll('.formList li:nth-child(2) .iptBox2 .ipt');
+                if (contactInputs.length === 3) {
+                    contactInputs.forEach((input, index) => {
+                    input.addEventListener('input', function () {
+                        // 숫자만 입력
+                        this.value = this.value.replace(/[^0-9]/g, '');
+                        // 자리수 제한
+                        if (index === 0 && this.value.length > 3) this.value = this.value.slice(0, 3);
+                        if (index === 1 && this.value.length > 4) this.value = this.value.slice(0, 4);
+                        if (index === 2 && this.value.length > 4) this.value = this.value.slice(0, 4);
+                    });
+                    });
+
+                    if (contactInputs.length === 3) {
+                        contactInputs.forEach((input, index) => {
+                            input.addEventListener('input', function () {
+                            this.value = this.value.replace(/[^0-9]/g, '');
+                            const maxLength = index === 0 ? 3 : 4;
+                            if (this.value.length > maxLength) this.value = this.value.slice(0, maxLength);
+
+                            // 자동 포커스 이동
+                            if (this.value.length === maxLength && index < contactInputs.length - 1) {
+                                contactInputs[index + 1].focus();
+                            }
+                            });
+                        });
+                    }
+                }
+                
+                //빠른 상담신청란 연락처 (숫자만 11자리)
+                const quickTelInput = document.querySelector('#quickTel');
+                if (quickTelInput) {
+                quickTelInput.addEventListener('input', function () {
+                    // 숫자만 입력
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                    // 최대 11자리 제한
+                    if (this.value.length > 11) {
+                    this.value = this.value.slice(0, 11);
+                    }
+                });
+                }
+
+                // 3️⃣ 빠른상담문의 연락처 (11자리만 가능)
+                const quickContactInput = document.querySelector('#quickContact');
+                if (quickContactInput) {
+                    quickContactInput.addEventListener('input', function () {
+                    this.value = this.value.replace(/[^0-9]/g, ''); // 숫자만 입력
+                    if (this.value.length > 11) this.value = this.value.slice(0, 11);
+                    });
+                }
+            });
+        </script>
+
+
+
     </body>
 </html>

@@ -345,7 +345,7 @@ section.sec5 { padding: 100px 0; background: url('../img/main/sec5/bg.jpg') no-r
 .bottom-apply-sec .b_formBox .agreeCheckDiv { margin-top: unset; }
 .bottom-apply-sec .b_formBox .agreeCheckDiv .privacyPopupBtn { white-space: nowrap; color: #fff; }
 .bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox::before { border: 1px solid #fff; }
-.bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox { align-items: center; }
+.bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox { align-items: center; font-size: 14px; }
 .bottom-apply-sec .agreeCheckDiv label input[type="checkbox"] + .textBox { align-items: center; }
 .bottom-apply-sec .b_contactBtn { padding: 15px 0; width: 116px; color: #fff; background: #366CB4; border: none; }
 
